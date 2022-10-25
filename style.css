@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -5,6 +7,7 @@
 
 body, html{
     height: 100%;
+    font-family: "roboto";
 }
 
 .container{
@@ -12,14 +15,18 @@ body, html{
     display: grid;
     grid-template-columns: 1fr 5fr;
     grid-template-rows: 1fr 5fr;
+    overflow: hidden;
 }
 
 .sidebar{
-    background-color: rgb(7, 176, 255);
+    background-color: rgb(0, 149, 235);
     grid-row: 1/3;
     color: white;
     display: grid;
-    grid-template-rows: 1fr 3fr 3fr 4fr;
+    grid-template-rows: 1fr 3fr 2fr 3fr;
+    padding-left: 1vw;
+    padding-top: 1vh;
+    font-weight: 700;
 }
 
 .headder{
@@ -27,6 +34,8 @@ body, html{
     grid-column: 2/3;
     display: grid;
     grid-template-rows: 1fr 2fr;
+    padding-top: 1vh;
+    padding-left: 3vw;
 }
 
 .main{
@@ -34,11 +43,33 @@ body, html{
     display: grid;
     grid-template-columns: 3fr 1fr;
     grid-template-rows: repeat(2, 1fr);
+    padding-bottom: 5vh;
+    gap: 25px ;
 }
 
 .headderleft,
 .headerright{
     display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.headerright{
+    margin-right: 3vw;
+}
+
+.headderleft{
+    flex-grow: 1;
+}
+
+.search{
+    width: 80%;
+    background-color: rgb(235, 235, 235);
+    border-radius: 50px;
+    border: none;
+    height: 28px;
+    font-size: 16px;
+    padding-left: 10px;
 }
 
 .headdertop,
@@ -50,14 +81,24 @@ body, html{
 
 .greeting{
     display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 12px;
+    gap: 20px;
 }
+
+.largename{
+    font-size: 18px;
+    margin-top: 5px; 
+}
+
 
 .yourprojects{
     grid-row: 1 / 3;
 }
 
 .projectcontainer{
-    height: 95%;
+    height: 100%;
     display: grid;
     gap: 20px;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -68,10 +109,76 @@ body, html{
     border-radius: 5px;
 }
 
-.anouncecontainer{
-    height: 95%;
+.anouncecontainer,
+.trendcontainer{
+    height: 100%;
     display: grid;
-    grid-template-rows: repeat(3, 1fr);
     border-radius: 5px;
     background-color: white;
+}
+
+.anouncecontainer{
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.trendcontainer{
+    grid-template-rows: repeat(4,1fr);
+}
+
+.dashicon{
+    height: 46px;
+}
+
+.title{
+    display: flex;
+    height: 50px;
+    align-items: center;
+}
+
+.heading{
+    font-size: 24px;
+    margin-left: 20px;
+    margin-right: 20px; 
+}
+
+ul{
+    list-style-type: none;
+}
+
+li{
+    height: 36px;
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    gap: 32px;
+}
+
+.pfp{
+    height: 36px;
+    border-radius: 32px;
+    border: 1px solid rgb(235, 235, 235);
+}
+
+.lg.pfp{
+    height: 52px;
+}
+
+.bell{
+    height: 24px;
+}
+
+.name{
+    font-weight: 700;
+}
+
+button{
+    background-color: rgb(0, 149, 235);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    height: 40px;
+    width: 100px;
+    margin-right: 2vw;
+    font-weight: 700;
+    font-size: 14px;
 }
