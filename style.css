@@ -42,9 +42,10 @@ body, html{
     background-color: rgb(219, 219, 219);
     display: grid;
     grid-template-columns: 3fr 1fr;
-    grid-template-rows: repeat(2, 1fr);
-    padding-bottom: 5vh;
+    grid-template-rows: 1fr;
+    padding-bottom: 10vh;
     gap: 25px ;
+    box-shadow: inset 0px 1px 5px darkgrey;
 }
 
 .headderleft,
@@ -92,37 +93,79 @@ body, html{
     margin-top: 5px; 
 }
 
+.maintitle{
+    margin: 15px 0 10px;
+    font-weight: 600;
+    font-size: 18px;
+}
 
 .yourprojects{
     grid-row: 1 / 3;
+    margin-left: 25px;
 }
 
 .projectcontainer{
-    height: 100%;
     display: grid;
-    gap: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-rows: repeat(1fr);
 }
 
 .project{
     background-color: white;
     border-radius: 5px;
+    padding: 4vh 3vw;
+    display: flex;
+    flex-direction: column;
+    box-shadow: inset 25px 0px 0px -10px gold;
+    box-shadow: 5px 5xp 3px black;
 }
 
 .anouncecontainer,
 .trendcontainer{
-    height: 100%;
     display: grid;
-    border-radius: 5px;
-    background-color: white;
+    border-radius: 15px;
+    background-color: white; 
+    margin-right: 30px; 
+    padding: 10px 40px 10px;
+}
+.anounce{
+    padding-top: 20px;
+}
+
+.anounce:not(:first-child){
+    border-top: 1px solid darkgray;
 }
 
 .anouncecontainer{
-    grid-template-rows: repeat(3, 1fr);
+    display: grid;
+    grid-template-rows: repeat(3,1fr);
+    padding: 15px 50px 10px;
 }
 
 .trendcontainer{
     grid-template-rows: repeat(4,1fr);
+    row-gap: 20px;
+}
+
+.trender{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 1fr;
+    padding-top: 10px;
+}
+
+.trendpfp.pfp{
+    grid-row: 1/3;
+    height: 46px;
+}
+
+.trendstatus{
+    color: rgb(126, 126, 126);
+}
+
+.trender>div{
+    grid-column: 2/3;
 }
 
 .dashicon{
@@ -154,9 +197,9 @@ li{
 }
 
 .pfp{
-    height: 36px;
+    height: 42px;
     border-radius: 32px;
-    border: 1px solid rgb(235, 235, 235);
+    border: 1px solid rgb(199, 199, 199);
 }
 
 .lg.pfp{
@@ -180,5 +223,36 @@ button{
     width: 100px;
     margin-right: 2vw;
     font-weight: 700;
+    font-size: 14px;
+}
+
+.projtitle,
+.anntitle{
+    font-weight: 700;
+    padding-bottom: 5px;
+    font-size: 17px ;
+}
+
+.projdesc,
+.anndesc{
+    color: rgb(126, 126, 126);
+}
+
+.projsymbols{
+    flex-grow: 1;
+    align-self: flex-end;
+    display: flex;
+    flex-direction:column-reverse;
+}
+
+.projnav{
+    justify-self: end;
+}
+
+.projimg{
+    padding-left: 25px;
+}
+
+.anndesc{
     font-size: 14px;
 }
